@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('triviaFire', ['ionic', 'triviaFire.controllers', 'starter.services', 'firebase'])
+angular.module('triviaFire', ['ionic', 'triviaFire.controllers', 'triviaFire.services', 'firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -49,7 +49,7 @@ angular.module('triviaFire', ['ionic', 'triviaFire.controllers', 'starter.servic
   .state('home', {
     url: "/home",
     templateUrl: "templates/home.html",
-    controller: 'HomeCtrl',
+    controller: 'index',
     data: {
       authenticate: false
     }
